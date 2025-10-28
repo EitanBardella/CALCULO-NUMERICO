@@ -1,4 +1,3 @@
-
 import math #Modulo que permite utilizar funciones complejas
 
 #Datos
@@ -7,18 +6,19 @@ error_aprox = 100 #Comienza en 100% pq es el maximo error posible
 error_deseado = 0.01 # Mi criterio de Pare
 iteracion = 0 # Contador de la cantidad de iteraciones
 
-#F(x) = x**2 + 2*x -3 ---> x = g(x) = raiz(-2*x +3)
+#F(x) = 2*x**2 + 2
+#F´(x) = 4*x
 
-#Funcion g(x)
+#Funcion f(x)
 
-def g(x): #Recibe el x = x_nuevo por parametro y lo retorna
-    return math.sqrt(-2*x +3) 
+def f(x): #Recibe el x = x_nuevo por parametro y lo retorna
+    return x - (2*x**2 + 2)/(4*x) 
 
 
 #Ciclo while para que se itere hasta que se cumpla la condicion
 while error_aprox > error_deseado:# El bucle se va a repetir hasta que el error aproximado sea menor al error deseado
     
-    x_nuevo = g(x) #Aca ejecuta la funcion (Osea dentro de esta variable se guarda el valor que retorna la funcion luego de ser ejecutada)
+    x_nuevo = f(x) #Aca ejecuta la funcion (Osea dentro de esta variable se guarda el valor que retorna la funcion luego de ser ejecutada)
 
     iteracion += 1 #Cada vez que se cumple una iteracion se suma 1 al contador ( Poner += 1  es lo mismo que poner = +1 )
 
