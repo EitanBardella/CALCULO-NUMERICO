@@ -24,7 +24,7 @@ while error_aprox > error_deseado:# El bucle se va a repetir hasta que el error 
 
     error_aprox = abs((x_nuevo - x)/x_nuevo) * 100 #Calculo el error aprox
     
-    print(f"Iteracion: {iteracion}, x = {x_nuevo:.10f}, Error Aproximado = {error_aprox:.6f}%")
+    print(f"Iteracion: {iteracion}, x(n) = {x} ,x(n+1) = {x_nuevo:.10f}, Error Aproximado = {error_aprox:.6f}%")
 
     x = x_nuevo #Actualizo X, va al final luego del print, ya que el codigo lo lee de arriba hacia abajo. Osea que cuando
                 #Imprime los valores en x pone el recien calculado, y luego este valor pasa a ser x para ser utilizado nuevamente
